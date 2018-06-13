@@ -1,0 +1,354 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title> Timeline |  Techphoria 2018</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <link href="http://techphoria.web.id/testing/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://techphoria.web.id/testing/assets/css/mdb.min.css" rel="stylesheet">
+    <link href="http://techphoria.web.id/testing/assets/css/style.css" rel="stylesheet">
+    <script type="text/javascript" src="http://techphoria.web.id/testing/assets/js/mdb.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+    <style>
+      .animated.standby {
+        -webkit-animation: none !important;
+        -o-animation: none !important;
+        animation: none !important;
+        visibility: hidden;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      /* The actual timeline (the vertical ruler) */
+      div.timeline {
+        position: relative;
+        width: 1000px;
+        margin: 0 auto;
+        color: white;
+        font-family: roboto;
+      }
+
+      div.judul {
+        font-size: 1.4em;
+        font-weight: bold;
+      }
+
+      div.isi {
+        font-size: 1.2em;
+        color: #263238;
+      }
+
+      /* The actual timeline (the vertical ruler) */
+      .timeline::after {
+        content: '';
+        position: absolute;
+        width: 3px;
+        background-color: #263238;
+        top: 0;
+        bottom: 5vh;
+        left: 50%;
+        margin-left: -3px;
+      }
+
+      /* Container around content */
+      .container-timeline {
+        padding: 10px 40px;
+        position: relative;
+        background-color: inherit;
+        width: 50%;
+      }
+      /* The circles on the timeline */
+      .container-timeline::after {
+        content: '';
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        right: -10px;
+        background-color: #ffc107;
+        border: 4px solid #ffc107;
+        top: 30px;
+        border-radius: 50%;
+        z-index: 1;
+      }
+      /* Place the container to the left */
+      .kiri {
+        left: 0;
+      }
+
+      /* Place the container to the right */
+      .kanan {
+        left: 50%;
+      }
+
+      /* Add arrows to the left container (pointing right) */
+      .ki::before {
+        content: " ";
+        height: 0;
+        position: absolute;
+        top: 20px;
+        width: 0;
+        z-index: 1;
+        right: -14px;
+        border: medium solid #263238;
+        border-width: 15px 0 15px 15px;
+        border-color: transparent transparent transparent #263238;
+      }
+
+      /* Add arrows to the right container (pointing left) */
+      .ka::before {
+        content: " ";
+        height: 0;
+        position: absolute;
+        top: 20px;
+        width: 0;
+        z-index: 1;
+        left: -14px;
+        border: medium solid #263238;
+        border-width: 15px 15px 15px 0;
+        border-color: transparent #263238 transparent transparent;
+      }
+
+      /* Fix the circle for containers on the right side */
+      .kanan::after {
+        left: -15px;
+      }
+
+      .isi {
+        padding: 20px 30px;
+        position: relative;
+      }
+
+      /* Media queries - Responsive timeline on screens less than 600px wide */
+      @media screen and (max-width: 600px) {
+        /* Place the timelime to the left */
+        .timeline::after {
+          left: 31px;
+        }
+        
+        /* Full-width containers */
+        .container-timeline {
+          width: 100%;
+          padding-left: 70px;
+          padding-right: 25px;
+        }
+        
+        /* Make sure that all arrows are pointing leftwards */
+        .ka::before, .ki::before {
+          left: -14px;
+          border: medium solid #263238;
+          border-width: 15px 15px 15px 0;
+          border-color: transparent #263238 transparent transparent;
+        }
+
+        /* Make sure all circles are at the same spot */
+        .kiri::after, .kanan::after {
+          left: 15px;
+        }
+        
+        /* Make all right containers behave like the left ones */
+        .kanan {
+          left: 0%;
+        }
+      }
+
+    </style>
+    <link rel="stylesheet" type="text/css" href="http://techphoria.web.id/testing/assets/fa/web-fonts-with-css/css/fontawesome-all.min.css">
+    <script type="text/javascript">
+        window.$crisp=[];
+        window.CRISP_WEBSITE_ID="993fde21-2a0d-4bc9-a06a-e1bfacd8d502";
+        (function(){
+            d=document;
+            s=d.createElement("script");
+            s.src="https://client.crisp.chat/l.js";
+            s.async=1;
+            d.getElementsByTagName("head")[0].appendChild(s);
+        })();
+    </script>
+    
+</head>
+<body>  
+  <!--Navbar-->
+  <nav class="sticky-top navbar navbar-expand-lg navbar-dark special-color-dark">
+    <div class="container">
+        <!-- Navbar brand -->
+        <a class="navbar-brand" href="#">
+          <img src="http://techphoria.web.id/testing/assets/img/logo.png" height="30" alt="" class="d-inline-block align-top"> 
+          <span class="techpho">TECHPHORIA</span>
+      </a>
+
+        <!-- Collapse button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="basicExampleNav">
+
+            <!-- Links -->
+            <ul class="navbar-nav my-2 my-lg-0 ml-auto">
+                <!--<li class="nav-item">
+                    <a class="nav-link" href="http://techphoria.web.id/testing/">Beranda</a>
+                </li>-->
+                <li class="nav-item">
+                    <a class="nav-link" href="http://techphoria.web.id/testing/main/berita">Berita</a>
+                </li>
+                <li class="nav-item">
+                  <a href="http://techphoria.web.id/testing/main/sejarah" class="nav-link">Sejarah</a>
+                </li>
+                <li class="nav-item">
+                  <a href="http://techphoria.web.id/testing/main/timeline" class="nav-link">Timeline</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="dropGan" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="">Kompetisi</a>
+                    <div class="dropdown-menu dropdown-primary">
+                      <a href="http://techphoria.web.id/testing/main/kompetisi/6" class="dropdown-item">Gambaran Kompetisi</a>
+                      <a href="http://techphoria.web.id/testing/main/kompetisi/1" class="dropdown-item">Competitive Programing</a>
+                      <a href="http://techphoria.web.id/testing/main/kompetisi/2" class="dropdown-item">IT Case</a>
+                      <a href="http://techphoria.web.id/testing/main/kompetisi/3" class="dropdown-item">Network Competition</a>
+                      <a href="http://techphoria.web.id/testing/main/kompetisi/4" class="dropdown-item">Paper Competition</a>
+                      <a href="http://techphoria.web.id/testing/main/kompetisi/5" class="dropdown-item">Robotic Competition</a>
+                    </div>
+                </li>
+                      <li class="nav-item">
+            <a href="http://techphoria.web.id/testing/login" class="nav-link btn btn-sm login btn-amber">Masuk</a>
+          </li>
+                        </ul>
+        <!-- Collapsible content -->
+      </div>
+    </div>
+  </nav>
+  <!--/.Navbar-->
+  <div class="content-boy">       
+      <div class="container">
+        <div class="row">
+          
+          <div class="col-md-12">
+            <div class="card mt-4">
+              <div class="card-header special-color-dark">
+                <div class="row">
+                  <div class="col-xsm-9"></div>
+                  <div class="col-xsm-1">
+                    <div class="lingkaran-1 amber"></div>
+                  </div>
+                  <div class="col-xsm-1">
+                    <div class="lingkaran-2 danger-color"></div>
+                  </div>
+                  <div class="col-xsm-1">
+                    <div class="lingkaran-3 info-color"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                
+                  <h2 class="techpho text-center" style="color: #263238;">Timeline Maint Event Techphoria 2018</h2>
+                  <br>
+                  <div class="row">
+                    <!--timeline-->
+                      <div class="timeline">
+                        <div class="container-timeline kanan">
+                          <div class="card ka animated standby fadeInUp">
+                            <div class="card-header special-color-dark judul">10 Oktober 2018</div>
+                            <div class="isi">Pelaksanaan Kompetisi.</div>
+                          </div>
+                        </div>
+                        <div class="container-timeline kiri">
+                          <div class="card ki animated standby fadeInUp">
+                            <div class="card-header special-color-dark judul">11 Oktober 2018</div>
+                            <div class="isi">Pelaksanaan Kompetisi.</div>
+                          </div>
+                        </div>
+                        <div class="container-timeline kanan">
+                          <div class="card ka animated standby fadeInUp">
+                            <div class="card-header special-color-dark judul">12 Oktober 2018</div>
+                            <div class="isi">Peserta melakukan city tour.</div>
+                          </div>
+                        </div>
+                        <div class="container-timeline kiri">
+                          <div class="card ki animated standby fadeInUp">
+                            <div class="card-header special-color-dark judul">13 Oktober 2018</div>
+                            <div class="isi">Peserta melakukan city tour.</div>
+                          </div>
+                        </div>
+                        <div class="container-timeline kanan">
+                          <div class="card ka animated standby fadeInUp">
+                            <div class="card-header special-color-dark judul">14 Oktober 2018</div>
+                            <div class="isi">Seminar, FEXO, Pengumuman Pemenang.</div>
+                          </div>
+                        </div>
+                        <!-- <div class="container-timeline kiri">
+                          <div class="card">
+                            <div class="card-header special-color-dark judul">13 Oktober 2018</div>
+                            <div class="isi">Peserta melakukan city tour.</div>
+                          </div>
+                        </div>
+                        <div class="container-timeline kanan">
+                          <div class="card">
+                            <div class="card-header special-color-dark judul">14 Oktober 2018</div>
+                            <div class="isi">Seminar, FEXO, Pengumuman Pemenang.</div>
+                          </div>
+                        </div>
+                        <div class="container-timeline kiri">
+                          <div class="card">
+                            <div class="card-header special-color-dark judul">13 Oktober 2018</div>
+                            <div class="isi">Peserta melakukan city tour.</div>
+                          </div>
+                        </div>
+                        <div class="container-timeline kanan">
+                          <div class="card">
+                            <div class="card-header special-color-dark judul">14 Oktober 2018</div>
+                            <div class="isi">Seminar, FEXO, Pengumuman Pemenang.</div>
+                          </div>
+                        </div> -->
+                      </div>
+                    <!--/.timeline-->
+                  </div>
+
+              </div>
+              <div class="card-footer special-color-dark">
+                
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      </div> <footer class="page-footer special-color-dark mt-3 py-3">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 text-center py-2">
+              <img src="http://techphoria.web.id/testing/assets/img/logo.png" height="30" alt=""> <span class="techpho text-uppercase"> techphoria 2018</span>
+            </div>
+
+            <div class="col-md-4">
+              
+            </div>
+
+            <div class="col-md-4 text-center py-2">
+              <a class="mx-2" target="_blank" href="https://www.techphoria.web.id/"><i class="fas fa-globe fa-lg"></i></a>
+              <a class="mx-2" target="_blank" href="https://www.instagram.com/technology.euphoria/?hl=id"><i class="fab fa-twitter fa-lg"></i></a>
+              <a class="mx-2" target="_blank" href="https://twitter.com/techphoria18"><i class="fab fa-instagram fa-lg"></i></a>
+              <a class="mx-2" target="_blank" href="https://www.facebook.com/techphoria.unsri/"><i class="fab fa-facebook fa-lg"></i></a>
+              <a class="mx-2" target="_blank" href="https://line.me/R/ti/p/@oob5672z"><i class="fab fa-line fa-lg"></i></a>
+            </div>
+          </div>
+        </div>
+      </footer>
+  
+  
+
+  <script type="text/javascript" src="http://techphoria.web.id/testing/assets/js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="http://techphoria.web.id/testing/assets/js/popper.min.js"></script>
+  <script type="text/javascript" src="http://techphoria.web.id/testing/assets/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="style/jquery-css3-animation-queue.js"></script>
+  
+</body>
+
+</html>
